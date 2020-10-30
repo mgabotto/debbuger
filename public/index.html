@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+
+
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="title" >
+            Super Mega Debbuger System
+        </h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde voluptatibus neque impedit iusto consequuntur
+            tempore, vero magnam molestias asperiores quibusdam, suscipit illum eum nostrum quia perspiciatis ipsam, ab
+            rerum a.</p>
+
+    </header>
+<!------------- Console ------------------->
+    <div class="console" >
+        <form action="">
+            <div class="type">
+                <label for="type">Select category</label>
+                <select name="type" id="type">
+                    <option value="bug">Bugs / Features</option>
+                    <option value="pendientes">Pending Tasks</option>
+                </select>
+            </div>
+            <div class="reponsable">
+                <label for="type">Responsable</label>
+                <select name="type" id="type">
+                    <option value="martin">Martín</option>
+                    <option value="esteban">Esteban</option>
+                    <option value="ramiro">Ramiro</option>
+                </select>
+            </div>
+            <div class="description">
+                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            </div>
+            <div class="urgency">
+                <label for="type">Urgency / Importance</label>
+                <select name="type" id="type">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+            <button type="submit">Add item</button>
+        </form>
+    </div>
+<!---------------- Items by  type -------------->
+    <div class="items">
+        <div class="bugCard">
+
+        </div>
+       <div class="pendingCard">
+
+       </div> 
+    </div>
+
+
+
+
+
+
+<!------------------- Firebase ------------------->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBBSyXx90SzdDCvCWE_BuWheTipPtbIZj8",
+            authDomain: "debugger-b3851.firebaseapp.com",
+            databaseURL: "https://debugger-b3851.firebaseio.com",
+            projectId: "debugger-b3851",
+            storageBucket: "debugger-b3851.appspot.com",
+            messagingSenderId: "73542980656",
+            appId: "1:73542980656:web:4ac2f775cbcab4826509f5",
+            measurementId: "G-KD0HRT8BTE"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+</body>
+
+</html>
