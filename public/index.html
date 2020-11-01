@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Style -->
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+
+
+    <title>Debugger</title>
 
 
 
@@ -15,7 +21,7 @@
 <body>
 
     <header>
-        <h1 class="title" >
+        <h1 class="title">
             Super Mega Debbuger System
         </h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde voluptatibus neque impedit iusto consequuntur
@@ -23,18 +29,22 @@
             rerum a.</p>
 
     </header>
-<!------------- Console ------------------->
-    <div class="console" >
+    <!------------- Console ------------------->
+    <div class="console">
         <form action="">
             <div class="type">
-                <label for="type">Select category</label>
+                <div class="label">
+                    <label for="type">Select category</label>
+                </div>
                 <select name="type" id="type">
                     <option value="bug">Bugs / Features</option>
                     <option value="pendientes">Pending Tasks</option>
                 </select>
             </div>
-            <div class="reponsable">
-                <label for="type">Responsable</label>
+            <div class="responsable">
+                <div class="label">
+                    <label for="type">Responsable</label>
+                </div>
                 <select name="type" id="type">
                     <option value="martin">Martín</option>
                     <option value="esteban">Esteban</option>
@@ -42,10 +52,13 @@
                 </select>
             </div>
             <div class="description">
-                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                <p>Description</p>
+                <textarea name="description" id="description" cols="60" rows="5" required></textarea>
             </div>
             <div class="urgency">
-                <label for="type">Urgency / Importance</label>
+                <div class="label">
+                    <label for="type">Urgency / Importance</label>
+                </div>
                 <select name="type" id="type">
                     <option value="high">High</option>
                     <option value="medium">Medium</option>
@@ -55,14 +68,19 @@
             <button type="submit">Add item</button>
         </form>
     </div>
-<!---------------- Items by  type -------------->
+    <!---------------- Items by  type -------------->
     <div class="items">
-        <div class="bugCard">
-
+        <div class="card" id="">
+            <p> Tipo </p>
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus impedit corporis placeat itaque
+                veniam nisi nam delectus reprehenderit magni molestias, minus laudantium atque minima, nobis aliquam
+                iste modi dolor nesciunt.</p>
+            <p class="dom"> #34534534534534 </p>
+            <div class="details">
+                <p> Responsable </p>
+                <p> Importance</p>
+            </div>
         </div>
-       <div class="pendingCard">
-
-       </div> 
     </div>
 
 
@@ -70,7 +88,7 @@
 
 
 
-<!------------------- Firebase ------------------->
+    <!------------------- Firebase ------------------->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>

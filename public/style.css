@@ -21,10 +21,7 @@ html {
     color:#333;
     }
 
-.console {
-    background-color: aqua;
-    padding: 30px;
-}
+
 
 
 
@@ -37,11 +34,13 @@ fieldset {
     }  
     input, select, textarea {
     font-size:1em;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+
     }
     label {
     cursor:pointer;
     vertical-align:middle;
+    font-family: 'Ubuntu', sans-serif;
     }
     input {
     vertical-align:middle;
@@ -68,4 +67,81 @@ h1, h2, h3, h4, h5, h6, p {
     h4 {font-size:1.3em;}
     h5 {font-size:1.2em;}
     h6 {font-size:1.1em;}
+
+
+    /* ------------------ Head ------------------- */
+    h1 {
+        font-family: 'Roboto Slab', serif;
+    }
+
+    /* ------------------ Console ------------------- */
+
+    .console {
+        margin: auto;
+        max-width: 95vh;
+        background-color: aqua;
+        padding: 30px;
+    }
+
+    .description {
+        /* flex-grow: 4; */
+    }
+    .responsable {
+        /* flex-grow: 4; */
+    }
+
+
+    .label {
+        display: inline-block;
+        width: 160px;
+        margin: 10px;
+        /* text-align: end; */
+    }
+
+    h1 {
+        text-align: center;
+        margin: 1rem;
+    }
+
+
+    /* ------------------ Cards ------------------- */
+
+
+
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+    grid-gap: 1rem;
+}
+
+
+.card {
+    margin: 20px;
+    background-color: yellow;
+}
+
+.dom {
+    font-size: 12px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    height: 55px;
+}
+
+.card p {
+    margin: 15px 15px 0 20px;
+}
+
+
+
+
+
+
+
+
+
+
 
