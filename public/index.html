@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
 
 
     <title>Debugger</title>
@@ -24,9 +25,7 @@
         <h1 class="title">
             Super Mega Debbuger System
         </h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde voluptatibus neque impedit iusto consequuntur
-            tempore, vero magnam molestias asperiores quibusdam, suscipit illum eum nostrum quia perspiciatis ipsam, ab
-            rerum a.</p>
+        <p> Agregar el problema o tarea pendiente a realizar </p>
 
     </header>
     <!------------- Console ------------------->
@@ -34,7 +33,7 @@
         <form action="">
             <div class="type">
                 <div class="label">
-                    <label for="type">Select category</label>
+                    <label for="type">Category</label>
                 </div>
                 <select name="type" id="type">
                     <option value="bug">Bugs / Features</option>
@@ -52,8 +51,8 @@
                 </select>
             </div>
             <div class="description">
-                <p>Description</p>
-                <textarea name="description" id="description" cols="60" rows="5" required></textarea>
+                <!-- <p>Description</p> -->
+                <textarea name="description" id="description" cols="50" rows="5" placeholder="Description of the task" required></textarea>
             </div>
             <div class="urgency">
                 <div class="label">
@@ -81,6 +80,7 @@
                 <p> Importance</p>
             </div>
         </div>
+        
     </div>
 
 

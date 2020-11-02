@@ -3,7 +3,7 @@ body, form, fieldset, ol, ul, li, h1, h2, h3, h4, h5, h6, p {
     margin:0;
     padding:0;
     }
-    img {
+img {
     border:0; /* kills Gecko bug when img's are placed inside links */
     vertical-align:bottom; /* set vertical align to bottom for IE */
     }
@@ -14,11 +14,15 @@ html {
     overflow:auto; /* triggers 100% height in Opera 9.5 */
     overflow-y:scroll; /* creates a horizontal scrollbar, for a more consistent look & feel */
     }
-    body {
+body {
     height:100%; /* helps make height 100% */
-    font:100%/1.5 Arial, Helvetica, sans-serif; /* 100% = 16px, 93.75% = 15px, 87.5% = 14px, 81.25% = 13px, 75% = 12px - font-size in % prevents IE's resize bug */
-    background:#FDFDFD;
-    color:#333;
+    font:100%/1.5 'Ubuntu', sans-serif; 
+    /* 100% = 16px, 93.75% = 15px, 87.5% = 14px, 81.25% = 13px, 75% = 12px - font-size in % prevents IE's resize bug */
+    /* background:#CFCDCD; */
+    background: linear-gradient(to bottom, rgb(45, 46, 47) 0%,rgba(0, 0, 0, 0) 100%);
+
+    
+    color: #37302C;
     }
 
 
@@ -29,20 +33,19 @@ html {
 fieldset {
     border:none;
     }
-    form :focus {
+form :focus {
     outline:0; /* removes Safari's blue border */
     }  
-    input, select, textarea {
+input, select, textarea {
     font-size:1em;
     font-family: 'Ubuntu', sans-serif;
 
     }
-    label {
-    cursor:pointer;
+label {
     vertical-align:middle;
     font-family: 'Ubuntu', sans-serif;
     }
-    input {
+input {
     vertical-align:middle;
     }
     textarea { 
@@ -70,21 +73,46 @@ h1, h2, h3, h4, h5, h6, p {
 
 
     /* ------------------ Head ------------------- */
-    h1 {
+    
+    header {
         font-family: 'Roboto Slab', serif;
+        color: white;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 2.5em;
+    }
+
+    header p {
+        text-align: center;
+        width: 75%;
+        margin: 20px auto;
+        font-size: 1.5em;
+
     }
 
     /* ------------------ Console ------------------- */
 
     .console {
         margin: auto;
-        max-width: 95vh;
-        background-color: aqua;
-        padding: 30px;
+        /* background: radial-gradient(circle, rgba(58,95,180,1) 0%, rgba(29,237,253,1) 50%, rgba(69,171,252,1) 100%); */
+        /* background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); */
+        /* background:#13036dd0; */
+        background:#cde6d0ad;
+        padding: 20px;
+        width: fit-content;
+        font-size: 20px;
+        color: rgb(19, 1, 1);
+        border: solid black 2px;
     }
 
-    .description {
-        /* flex-grow: 4; */
+    .console label {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    #description {
+        width: 100%;
     }
     .responsable {
         /* flex-grow: 4; */
@@ -93,8 +121,8 @@ h1, h2, h3, h4, h5, h6, p {
 
     .label {
         display: inline-block;
-        width: 160px;
-        margin: 10px;
+        width: 190px;
+        margin: 10px 0 10px 0;
         /* text-align: end; */
     }
 
@@ -103,6 +131,7 @@ h1, h2, h3, h4, h5, h6, p {
         margin: 1rem;
     }
 
+    
 
     /* ------------------ Cards ------------------- */
 
@@ -118,7 +147,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .card {
     margin: 20px;
-    background-color: yellow;
+    background-color: #719173;
 }
 
 .dom {
