@@ -16,7 +16,7 @@ html {
     }
 body {
     height:100%; /* helps make height 100% */
-    font:100%/1.5 'Ubuntu', sans-serif; 
+    font-family: 'Roboto Mono', monospace;
     /* 100% = 16px, 93.75% = 15px, 87.5% = 14px, 81.25% = 13px, 75% = 12px - font-size in % prevents IE's resize bug */
     /* background:#CFCDCD; */
     background: linear-gradient(to bottom, rgb(45, 46, 47) 0%,rgba(0, 0, 0, 0) 100%);
@@ -75,13 +75,15 @@ h1, h2, h3, h4, h5, h6, p {
     /* ------------------ Head ------------------- */
     
     header {
-        font-family: 'Roboto Slab', serif;
+        font-family: 'Syne Mono', monospace;
         color: white;
     }
 
     h1 {
         text-transform: uppercase;
         font-size: 2.5em;
+        text-align: center;
+        margin: 1rem;
     }
 
     header p {
@@ -99,7 +101,7 @@ h1, h2, h3, h4, h5, h6, p {
         /* background: radial-gradient(circle, rgba(58,95,180,1) 0%, rgba(29,237,253,1) 50%, rgba(69,171,252,1) 100%); */
         /* background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); */
         /* background:#13036dd0; */
-        background:#cde6d0ad;
+        background:#fdfdfdad;
         padding: 20px;
         width: fit-content;
         font-size: 20px;
@@ -113,6 +115,7 @@ h1, h2, h3, h4, h5, h6, p {
 
     #description {
         width: 100%;
+        margin: 15px 0;
     }
     .responsable {
         /* flex-grow: 4; */
@@ -122,15 +125,28 @@ h1, h2, h3, h4, h5, h6, p {
     .label {
         display: inline-block;
         width: 190px;
-        margin: 10px 0 10px 0;
+        margin: 15px 0;
         /* text-align: end; */
     }
 
-    h1 {
+    .buttonConsole {
         text-align: center;
-        margin: 1rem;
+        padding-top: 30px;
     }
 
+    .buttonConsole button {
+        color: rgba(255, 255, 255, 0.781);
+        background-color: rgb(12, 15, 161);
+        font-size: 1.2em;
+        text-transform: uppercase;
+        font-family: 'Roboto Mono', monospace;
+        transition: all 0.5s;
+    }
+
+    .buttonConsole button:hover {
+        background-color: rgb(161, 243, 10);
+        color: rgba(3, 0, 0, 0.781);
+    }
     
 
     /* ------------------ Cards ------------------- */
@@ -147,7 +163,21 @@ h1, h2, h3, h4, h5, h6, p {
 
 .card {
     margin: 20px;
-    background-color: #719173;
+    background-color: #000000c4;
+    color: white;
+    transition: all 0.5s;
+    /* border: solid 8px; */
+}
+
+.card:hover {
+    /* border: rgb(20, 9, 180) solid 8px; */
+    box-shadow:         3px 3px 5px 5px rgba(40, 41, 39, 0.849);
+}
+
+
+.type-c {
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .dom {
@@ -157,11 +187,18 @@ h1, h2, h3, h4, h5, h6, p {
 .details {
     display: flex;
     justify-content: space-around;
-    height: 55px;
+}
+
+.details p {
+    text-align: center;
+    background-color: rgb(230, 223, 230);
+    color: black;
+    padding: 10px;
+    text-transform: uppercase;
 }
 
 .card p {
-    margin: 15px 15px 0 20px;
+    margin: 15px;
 }
 
 
