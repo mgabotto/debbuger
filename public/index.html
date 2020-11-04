@@ -12,13 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
 
-
+    <script src="https://kit.fontawesome.com/fd4568343f.js" crossorigin="anonymous"></script>
 
     <title>Debugger</title>
 
+    <script src="app.js" defer ></script>
 
 
-    <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -37,16 +37,16 @@
                 <div class="label">
                     <label for="type">Category</label>
                 </div>
-                <select name="type" id="type">
-                    <option value="bug">Bugs / Features</option>
-                    <option value="pendientes">Pending Tasks</option>
+                <select name="type" id="typeTask">
+                    <option value="bug / error" id="bug">Bugs / Features</option>
+                    <option value="pending task" id="pending">Pending Tasks</option>
                 </select>
             </div>
             <div class="responsable">
                 <div class="label">
                     <label for="type">Responsable</label>
                 </div>
-                <select name="type" id="type">
+                <select name="type" id="resp">
                     <option value="martin">Martín</option>
                     <option value="esteban">Esteban</option>
                     <option value="ramiro">Ramiro</option>
@@ -54,34 +54,39 @@
             </div>
             <div class="description">
                 <!-- <p>Description</p> -->
-                <textarea name="description" id="description" cols="50" rows="5" placeholder="Description of the task" required></textarea>
+                <textarea  name="description" id="description" cols="40" rows="1" placeholder="Description of the task" maxlength="30" required></textarea>
             </div>
             <div class="urgency">
                 <div class="label">
                     <label for="type">Urgency / Importance</label>
                 </div>
-                <select name="type" id="type">
+                <select name="level" id="level">
                     <option value="high">High</option>
                     <option value="medium">Medium</option>
                     <option value="low">Low</option>
                 </select>
             </div>
             <div class="buttonConsole">
-                <button type="submit">Add item</button>
+                <button type="button" class="btnAdd">add item</button>
             </div>
         </form>
     </div>
     <!---------------- Items by  type -------------->
     <div class="items">
         <div class="card" id="">
-            <p class="type-c"> Tipo </p>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus impedit corporis placeat itaque
-                veniam nisi nam delectus reprehenderit magni molestias, minus laudantium atque minima, nobis aliquam
-                iste modi dolor nesciunt.</p>
+            <div class="head">
+                <p class="type-c"> Tipo </p>
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="desc">
+                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus impedit corporis placeat itaque
+            veniam nisi niunt.</p>
+
+            </div>
             <p class="dom"> #34534534534534 </p>
             <div class="details">
-                <p> Responsable </p>
-                <p> Importance</p>
+                <p class="square"> Responsable </p>
+                <p class="square"> Importance</p>
             </div>
         </div>
         

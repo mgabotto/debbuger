@@ -19,8 +19,7 @@ body {
     font-family: 'Roboto Mono', monospace;
     /* 100% = 16px, 93.75% = 15px, 87.5% = 14px, 81.25% = 13px, 75% = 12px - font-size in % prevents IE's resize bug */
     /* background:#CFCDCD; */
-    background: linear-gradient(to bottom, rgb(45, 46, 47) 0%,rgba(0, 0, 0, 0) 100%);
-
+    background: linear-gradient(to right, #d3bce4, #a5c3a8);
     
     color: #37302C;
     }
@@ -76,14 +75,14 @@ h1, h2, h3, h4, h5, h6, p {
     
     header {
         font-family: 'Syne Mono', monospace;
-        color: white;
+        color: rgb(30, 9, 114);
     }
 
     h1 {
         text-transform: uppercase;
         font-size: 2.5em;
         text-align: center;
-        margin: 1rem;
+        margin: 20px 0;
     }
 
     header p {
@@ -116,6 +115,7 @@ h1, h2, h3, h4, h5, h6, p {
     #description {
         width: 100%;
         margin: 15px 0;
+        font-size: 20px;
     }
     .responsable {
         /* flex-grow: 4; */
@@ -141,6 +141,7 @@ h1, h2, h3, h4, h5, h6, p {
         text-transform: uppercase;
         font-family: 'Roboto Mono', monospace;
         transition: all 0.5s;
+        cursor: pointer;
     }
 
     .buttonConsole button:hover {
@@ -163,25 +164,27 @@ h1, h2, h3, h4, h5, h6, p {
 
 .card {
     margin: 20px;
-    background-color: #000000c4;
-    color: white;
+    background-color:  rgba(12, 15, 161, 0.815);
+    color: rgb(228, 224, 224);
     transition: all 0.5s;
-    /* border: solid 8px; */
+    border: solid 2px rgb(194, 163, 163) ;
+    border-radius: 25px;
 }
 
 .card:hover {
     /* border: rgb(20, 9, 180) solid 8px; */
-    box-shadow:         3px 3px 5px 5px rgba(40, 41, 39, 0.849);
+    box-shadow: 0px 3px 5px 5px rgba(40, 41, 39, 0.849);
 }
 
 
 .type-c {
     text-transform: uppercase;
     text-align: center;
+    font-size: 2em;
 }
 
 .dom {
-    font-size: 12px;
+    font-size: 18px;
 }
 
 .details {
@@ -189,7 +192,7 @@ h1, h2, h3, h4, h5, h6, p {
     justify-content: space-around;
 }
 
-.details p {
+.square {
     text-align: center;
     background-color: rgb(230, 223, 230);
     color: black;
@@ -199,6 +202,26 @@ h1, h2, h3, h4, h5, h6, p {
 
 .card p {
     margin: 15px;
+}
+
+.desc {
+    max-height: 4rem;
+}
+
+
+.high {
+    background-color: rgb(182, 6, 6);
+    color: white;
+}
+
+.medium {
+    background-color: rgb(243, 208, 12);
+    color: rgb(0, 0, 0);
+}
+
+.low {
+    background-color: rgb(66, 243, 12);
+    color: rgb(0, 0, 0);
 }
 
 
