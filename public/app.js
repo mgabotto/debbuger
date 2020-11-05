@@ -15,7 +15,6 @@ let newItem = {}
 
 // ADD ITEM
 
-
 btnAdd.addEventListener('click', function () {
 
     if (description.value) {

@@ -181,6 +181,22 @@ h1, h2, h3, h4, h5, h6, p {
     text-transform: uppercase;
     text-align: center;
     font-size: 2em;
+    width: 75%;
+    display: inline-block;
+}
+
+.x {
+    color: rgb(255, 255, 255);
+    border: blanchedalmond solid 2px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(19, 9, 110, 0.616);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.x:hover {
+    background-color: rgba(230, 16, 16, 0.616);
 }
 
 .dom {
