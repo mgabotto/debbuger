@@ -1,5 +1,7 @@
 
 // LISTENERS
+
+
 const category = document.getElementById('typeTask');
 const responsable = document.getElementById('resp');
 const description = document.getElementById('description');
@@ -7,6 +9,11 @@ const level = document.getElementById('level');
 const btnAdd = document.querySelector('.btnAdd');
 
 const itemsContainer = document.querySelector('.items');
+
+export {level};
+
+
+listeners();
 
 // VARIABLES
 
