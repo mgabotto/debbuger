@@ -16,7 +16,7 @@
 
     <title>Debugger</title>
 
-    <script src="app.js" defer></script>
+
 
 
 </head>
@@ -38,8 +38,8 @@
                     <label for="type">Category</label>
                 </div>
                 <select name="type" id="typeTask">
-                    <option value="bug / error" id="bug">Bugs / Features</option>
-                    <option value="pending task" id="pending">Pending Tasks</option>
+                    <option value="bug-feature" id="bug">Bugs / Features</option>
+                    <option value="pending-task" id="pending">Pending Tasks</option>
                 </select>
             </div>
             <div class="responsable">
@@ -68,13 +68,13 @@
                 </select>
             </div>
             <div class="buttonConsole">
-                <button type="button" class="btnAdd">add item</button>
+                <button type="button" id="btn">add item</button>
             </div>
         </form>
     </div>
     <!---------------- Items by  type -------------->
     <div class="items">
-        <div class="card" id="">
+        <!-- <div class="card" id="">
             <div class="head">
                 <p class="type-c"> Tipo </p>
                 <i class="x fas fa-times fa-lg"></i>
@@ -90,7 +90,7 @@
                 <p class="square"> Responsable </p>
                 <p class="square"> Importance</p>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
@@ -100,11 +100,28 @@
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
 
-    <script src="firebase.js"></script>
 
+    <!-- // Your web app's Firebase configuration -->
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDXkO_G0-f_ecjYzM5DyCcNATFNqjj8Xt8",
+            authDomain: "list-test-8b1e0.firebaseapp.com",
+            databaseURL: "https://list-test-8b1e0.firebaseio.com",
+            projectId: "list-test-8b1e0",
+            storageBucket: "list-test-8b1e0.appspot.com",
+            messagingSenderId: "15585015929",
+            appId: "1:15585015929:web:0a3e7156718a951c92fca8",
+            measurementId: "G-8R17SM0WRE"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <script src="app.js"></script>
 
 </body>
 

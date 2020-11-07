@@ -1,78 +1,111 @@
 
+
+// <!-- list-test-8b1e0.web.app -->
+
+
+
+
 // LISTENERS
 
+const db = firebase.firestore();
 
-const category = document.getElementById('typeTask');
-const responsable = document.getElementById('resp');
-const description = document.getElementById('description');
-const level = document.getElementById('level');
-const btnAdd = document.querySelector('.btnAdd');
+const form = document.querySelector('form');
+
+const taskCategory = document.getElementById('typeTask');
+const taskResponsable = document.getElementById('resp');
+const taskDescription = document.getElementById('description');
+const taskLevel = document.getElementById('level');
+const btnAdd = document.querySelector('#btn');
 
 const itemsContainer = document.querySelector('.items');
 
-export {level};
-
-
-listeners();
 
 // VARIABLES
 
 let itemStore = [];
 let newItem = {}
 
-// ADD ITEM
 
-btnAdd.addEventListener('click', function () {
+// DATASTORE DATA
 
-    if (description.value) {
-        getValues();
-        addItem();
-    } else {
-        alert('Complete con una descripción de la tarea o problema ')
-    }
+
+
+
+
+const storeTask = (category, responsable, description, importance) => {
+
+    db.collection(`tasks`).doc().set({
+        category,
+        responsable,
+        description,
+        importance,
+    })
+}
+
+
+const deleteTask = (id) => db.collection('tasks').doc(id).delete()
+
+const getTasks = () => db.collection('tasks').get();
+const getUpdate = (callback) => db.collection('tasks').onSnapshot(callback)
+
+
+window.addEventListener('DOMContentLoaded', async (e) => {
+    // const querySnapshot = await getTasks();
+
+    getUpdate((querySnapshot) => {
+
+
+        itemsContainer.innerHTML = '';
+        querySnapshot.forEach(doc => {
+
+            let data = doc.data();
+            data.id = doc.id;
+            
+            itemsContainer.innerHTML += `        
+            <div class="card" id="">
+            <div class="head">
+                <p class="type-c"> ${data.category} </p>
+                <i class="x fas fa-times fa-lg btnDelete" data-id="${data.id}"></i>
+            </div>
+            <div class="desc">
+                <p> ${data.description}</p>
+            </div>
+            <p class="dom"> ${data.id} </p>
+            <div class="details">
+                <p class="square"> ${data.responsable} </p>
+                <p class="square ${data.importance}"> ${data.importance} </p>
+            </div>
+            </div>`;
+
+
+            const deleteBtn = document.querySelectorAll('.btnDelete');
+            deleteBtn.forEach((btn) => {
+                btn.addEventListener('click', async (x)=> {
+                    // console.log(x.target.dataset.id);
+                    await deleteTask(x.target.dataset.id)
+                })
+            })
+        })
+    })
 })
 
-// function submit () {
-//     getValues();
-//     addItem();
-// }
 
 
+btnAdd.addEventListener('click', async (e) => {
 
-// INPUT
+    const category = taskCategory.value;
+    const responsable = taskResponsable.value;
+    const description = taskDescription.value;
+    const importance = taskLevel.value;
 
-function getValues() {
-    newItem.category = category.value;
-    newItem.responsable = responsable.value;
-    newItem.description = description.value;
-    newItem.level = level.value;
+    if (!description) {
+        return alert('Completar descripcion')
+    }
 
-}
+    await getTasks();
 
+    await storeTask(category, responsable, description, importance);
 
-function addItem() {
+    form.reset();
 
-    // ID BUG / TASK
-    let date = new Date();
-    let id = date.getTime().toString()
-
-
-    // ADDING ITEM TO UI
-    let item = document.createElement('div');
-    item.classList.add('card')
-
-
-    item.innerHTML = `  
-    <p class="type-c"> ${newItem.category} </p>
-    <div class="desc">
-    <p> ${newItem.description}</p> </div>
-    <p class="dom"> #${id} </p>
-    <div class="details">
-        <p class="square"> ${newItem.responsable} </p>
-        <p class="square ${newItem.level}"> ${newItem.level}</p>
-    </div>`
-
-    itemsContainer.appendChild(item)
-
-    description.value = '';
-}
+})
