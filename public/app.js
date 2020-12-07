@@ -64,13 +64,13 @@ window.addEventListener('DOMContentLoaded', async (e) => {
             itemsContainer.innerHTML += `        
             <div class="card" id="">
             <div class="head">
-                <p class="type-c"> ${data.category} </p>
+                <p class="dataCategory"> ${data.category} </p>
                 <i class="x fas fa-times fa-lg btnDelete" data-id="${data.id}"></i>
             </div>
-            <div class="desc">
+            <div class="descriptionItem">
                 <p> ${data.description}</p>
             </div>
-            <p class="dom"> ${data.id} </p>
+            <p class="taskID"> ${data.id} </p>
             <div class="details">
                 <p class="square"> ${data.responsable} </p>
                 <p class="square ${data.importance}"> ${data.importance} </p>
@@ -109,3 +109,9 @@ btnAdd.addEventListener('click', async (e) => {
     form.reset();
 
 })
+
+const a  = {
+    asd: 'sdfds'
+}
+
+console.log(a)

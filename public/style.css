@@ -21,7 +21,7 @@ body {
     /* opacity: 0.4; */
     background-color: #E5E5F7;
     /* opacity: 0.4; */
-    background-image:  radial-gradient(#444CF7 1px, transparent 1px), radial-gradient(#444CF7 1px, #E5E5F7 1px);
+    background-image:  radial-gradient(#b2f744 1px, transparent 1px), radial-gradient(#5f44f7 1px, #E5E5F7 1px);
     background-size: 40px 40px;
     background-position: 0 0,20px 20px;
     
@@ -82,6 +82,7 @@ h1, h2, h3, h4, h5, h6, p {
         color: rgb(14, 4, 54);
         background-color: rgba(0, 170, 248, 0.712);
         border: black solid 1px;
+        border-radius: 20px;
         margin: 2rem auto;
         max-width: 60%;;
     }
@@ -90,7 +91,7 @@ h1, h2, h3, h4, h5, h6, p {
         text-transform: uppercase;
         font-size: 2.5em;
         text-align: center;
-        margin: 20px 0;
+        margin: 10px 0;
     }
 
     header p {
@@ -101,19 +102,37 @@ h1, h2, h3, h4, h5, h6, p {
 
     }
 
+
+    /* Container Console + Items */
+    main {
+        display: flex;
+        /* flex-direction: column; */
+        background: rgba(0, 0, 0, 0.411);
+    }
+
+
+
+
+
+    
     /* ------------------ Console ------------------- */
 
+    .consoleSection {
+        /* max-width: 300px; */
+        width: 410px;
+    }
+    
     .console {
-        margin: auto;
-        /* background: radial-gradient(circle, rgba(58,95,180,1) 0%, rgba(29,237,253,1) 50%, rgba(69,171,252,1) 100%); */
-        /* background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); */
-        /* background:#13036dd0; */
+        margin: 20px;
         background:#fdfdfd;
         padding: 20px;
-        width: fit-content;
+        width: 350px;
+        height: 320px;
         font-size: 20px;
         color: rgb(19, 1, 1);
         border: solid black 2px;
+        display: flex;
+        
     }
 
     .console label {
@@ -125,9 +144,7 @@ h1, h2, h3, h4, h5, h6, p {
         margin: 15px 0;
         font-size: 20px;
     }
-    .responsable {
-        /* flex-grow: 4; */
-    }
+
 
 
     .label {
@@ -165,18 +182,23 @@ h1, h2, h3, h4, h5, h6, p {
 
 .items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 1rem;
+    width: 80rem;
+    height: max-content;
+    margin: 20px;
 }
 
 
 .card {
-    margin: 20px;
+    margin: 10px;
+    /* max-width: 30rem; */
     background-color:  rgb(12, 15, 161);
     color: rgb(228, 224, 224);
     transition: all 0.5s;
     border: solid 2px rgb(194, 163, 163) ;
     border-radius: 25px;
+    max-width: 350px;
 }
 
 .card:hover {
@@ -185,31 +207,32 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 
-.type-c {
+.dataCategory {
     text-transform: uppercase;
     text-align: center;
-    font-size: 2em;
+    font-size: 1em;
     width: 75%;
     display: inline-block;
 }
 
 
-.x {
+.btnDelete {
     color: rgb(255, 255, 255);
     border: blanchedalmond solid 2px;
-    padding: 10px;
+    padding: 6px;
     border-radius: 10px;
     background-color: rgba(19, 9, 110, 0.616);
     cursor: pointer;
     transition: all 0.3s;
 }
 
-.x:hover {
+.btnDelete:hover {
     background-color: rgba(230, 16, 16, 0.616);
 }
 
-.dom {
-    font-size: 18px;
+.taskID {
+    font-size: 12px;
+    margin: 0;
 }
 
 .details {
@@ -221,7 +244,8 @@ h1, h2, h3, h4, h5, h6, p {
     text-align: center;
     background-color: rgb(230, 223, 230);
     color: black;
-    padding: 10px;
+    padding: 4px;
+    height: 22px;
     text-transform: uppercase;
 }
 
@@ -229,7 +253,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 15px;
 }
 
-.desc {
+.descriptionItem {
     max-height: 4rem;
 }
 
@@ -250,12 +274,14 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 
+@media only screen and (max-width: 600px) {
+    .main {
+      /* flex-direction: column; */
+      flex-wrap: wrap;
+    }
+    .consoleSection {
+float: left;
+    }
+    
 
-
-
-
-
-
-
-
-
+  }
