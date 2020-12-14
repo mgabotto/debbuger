@@ -18,6 +18,10 @@
     <title>Debugger</title>
 
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap" rel="stylesheet">
+
+
 
 
 </head>
@@ -33,50 +37,50 @@
     </header>
     <!------------- Console ------------------->
     <main>
-<div class="consoleSection">
-    <div class="console">
-        <form action="">
-            <div class="type">
-                <div class="label">
-                    <label for="type">Category</label>
-                </div>
-                <select name="type" id="typeTask">
-                    <option value="bug-feature" id="bug">Bugs / Features</option>
-                    <option value="pending-task" id="pending">Pending Tasks</option>
-                </select>
+        <div class="consoleSection">
+            <div class="console">
+                <form action="">
+                    <div class="type">
+                        <div class="label">
+                            <label for="type">Category</label>
+                        </div>
+                        <select name="type" id="typeTask">
+                            <option value="bug-feature" id="bug">Bugs / Features</option>
+                            <option value="pending-task" id="pending">Pending Tasks</option>
+                        </select>
+                    </div>
+                    <div class="responsable">
+                        <div class="label">
+                            <label for="type">Responsable</label>
+                        </div>
+                        <select name="type" id="resp">
+                            <option value="martin">Martín</option>
+                            <option value="esteban">Esteban</option>
+                            <option value="ramiro">Ramiro</option>
+                        </select>
+                    </div>
+                    <div class="description">
+                        <!-- <p>Description</p> -->
+                        <textarea name="description" id="description" cols="40" rows="1"
+                            placeholder="Description of the task" maxlength="30" required></textarea>
+                    </div>
+                    <div class="urgency">
+                        <div class="label">
+                            <label for="type">Urgency / Importance</label>
+                        </div>
+                        <select name="level" id="level">
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                    <div class="buttonConsole">
+                        <button type="button" id="btn">add item</button>
+                    </div>
+                </form>
             </div>
-            <div class="responsable">
-                <div class="label">
-                    <label for="type">Responsable</label>
-                </div>
-                <select name="type" id="resp">
-                    <option value="martin">Martín</option>
-                    <option value="esteban">Esteban</option>
-                    <option value="ramiro">Ramiro</option>
-                </select>
-            </div>
-            <div class="description">
-                <!-- <p>Description</p> -->
-                <textarea name="description" id="description" cols="40" rows="1" placeholder="Description of the task"
-                    maxlength="30" required></textarea>
-            </div>
-            <div class="urgency">
-                <div class="label">
-                    <label for="type">Urgency / Importance</label>
-                </div>
-                <select name="level" id="level">
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                </select>
-            </div>
-            <div class="buttonConsole">
-                <button type="button" id="btn">add item</button>
-            </div>
-        </form>
-    </div>
 
-</div>
+        </div>
         <!---------------- Items by  type -------------->
         <div class="items">
             <!-- <div class="card" id="">
@@ -96,10 +100,10 @@
                     <p class="square"> Importance</p>
                 </div>
             </div> -->
-    
+
         </div>
     </main>
-    
+
 
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
