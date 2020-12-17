@@ -30,9 +30,9 @@
 
     <header>
         <h1 class="title">
-            Super Mega Debbuger System
+            detalle de tareas
         </h1>
-        <p> Agregar el problema o tarea pendiente a realizar </p>
+        <!-- <p> Agregar el problema o tarea pendiente a realizar </p> -->
 
     </header>
     <!------------- Console ------------------->
@@ -40,16 +40,16 @@
         <div class="consoleSection">
             <div class="console">
                 <form action="">
-                    <div class="type">
+                    <div class="labelContainer">
                         <div class="label">
-                            <label for="type">Category</label>
+                            <label for="type">Categoría</label>
                         </div>
                         <select name="type" id="typeTask">
                             <option value="bug-feature" id="bug">Bugs / Features</option>
                             <option value="pending-task" id="pending">Pending Tasks</option>
                         </select>
                     </div>
-                    <div class="responsable">
+                    <div class="labelContainer">
                         <div class="label">
                             <label for="type">Responsable</label>
                         </div>
@@ -64,9 +64,9 @@
                         <textarea name="description" id="description" cols="40" rows="1"
                             placeholder="Description of the task" maxlength="30" required></textarea>
                     </div>
-                    <div class="urgency">
+                    <div class=" labelContainer ">
                         <div class="label">
-                            <label for="type">Urgency / Importance</label>
+                            <label for="type">Importancia</label>
                         </div>
                         <select name="level" id="level">
                             <option value="high">High</option>

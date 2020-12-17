@@ -110,8 +110,3 @@ btnAdd.addEventListener('click', async (e) => {
 
 })
 
-const a  = {
-    asd: 'sdfds'
-}
-
-console.log(a)

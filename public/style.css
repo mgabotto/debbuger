@@ -18,8 +18,7 @@ body {
     height: 100vh; /* helps make height 100% */
     font-family: 'Roboto Mono', monospace;
     background-color: #85FFBD;
-    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
-    
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,253,118,1) 100%);    
     }
 
 
@@ -73,13 +72,14 @@ h1, h2, h3, h4, h5, h6 {
     
     header {
         color: rgb(255, 255, 255);
-        background-color: rgba(1, 11, 15, 0.486);
+        background-color: rgb(250, 246, 246);
         border: rgb(0, 0, 0) solid 3px;
-        /* border-radius: 20px; */
+        color: black;
         margin: 2rem auto;
-        max-width: 60%;;
-        height: 150px;
+        width: fit-content;
+        padding: 5px;
         font-family: 'Averia Serif Libre', cursive;
+        border-radius: 25px;
     }
 
     h1 {
@@ -102,7 +102,8 @@ h1, h2, h3, h4, h5, h6 {
     main {
         display: flex;
         /* flex-direction: column; */
-        background: rgba(0, 0, 0, 0.411);
+        
+        gap: 30px  ;
     }
 
 
@@ -120,13 +121,14 @@ h1, h2, h3, h4, h5, h6 {
     
     .console {
         margin: 20px;
-        background:#fdfdfd;
+        background:#ffffff;
         padding: 20px;
-        width: 350px;
+        width: 370px;
         height: 320px;
         font-size: 20px;
         color: rgb(19, 1, 1);
         border: solid black 2px;
+        border-radius: 30px;
         display: flex;
         
     }
@@ -135,19 +137,39 @@ h1, h2, h3, h4, h5, h6 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
 
+
+    .labelContainer {
+        display: flex;
+        height: 65px;
+        align-items: center;
+    }
+
+    #typeTask {
+        height: 30px;
+    }
+
     #description {
         width: 100%;
         margin: 15px 0;
         font-size: 20px;
     }
 
-
+    select{
+        border: none;
+        color: blue;
+        font-weight: 800;
+        height: 35px;
+        width: 180px;
+        text-transform: uppercase;
+    }
 
     .label {
         display: inline-block;
         width: 190px;
         margin: 15px 0;
-        /* text-align: end; */
+        text-transform: uppercase;
+        font-weight: 550;
+        font-style: italic;
     }
 
     .buttonConsole {
@@ -189,8 +211,8 @@ h1, h2, h3, h4, h5, h6 {
 .card {
     margin: 10px;
     /* max-width: 30rem; */
-    background-color:  rgba(14, 31, 187, 0.698);
-    color: rgb(228, 224, 224);
+    background-color:  rgba(255, 255, 255, 0.87);
+    color: rgb(0, 0, 0);
     transition: all 0.5s;
     border: solid 2px rgb(194, 163, 163) ;
     border-radius: 25px;
@@ -205,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .head {
     margin-top: 10px;
-    color: rgb(225, 225, 255);
+    color: rgb(0, 0, 0);
 }
 
 .dataCategory {
